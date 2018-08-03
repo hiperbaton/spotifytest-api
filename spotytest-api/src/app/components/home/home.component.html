@@ -1,3 +1,17 @@
-<p>
-  home works!
-</p>
+<div class="card-columns">
+
+  <div *ngFor="let lanzamiento of nuevosLanzamientos" class="card">
+    <img class="card-img-top" [src]="lanzamiento.images[0].url" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">
+        {{lanzamiento.name}}
+      </h5>
+      <p class="card-text">
+          <span *ngFor="let artista of lanzamiento.artists" class="badge badge-pill badge-primary">
+            {{artista.name}}
+          </span>
+      </p>
+    </div>
+  </div>
+
+</div>
